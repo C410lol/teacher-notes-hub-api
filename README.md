@@ -1,27 +1,27 @@
 # Teacher Notes Hub — API
 
-API REST do **Teacher Notes Hub**, uma aplicação voltada à organização de informações e rotinas escolares. O backend concentra as regras de negócio e a persistência dos dados utilizados pela interface web, oferecendo recursos para gerenciar usuários, instituições, professores, alunos, cadernetas, aulas, frequência, notas e atividades.
+The REST API for **Teacher Notes Hub**, an application designed to organize school information and routines. The backend centralizes business rules and data persistence for the web interface, providing features to manage users, institutions, teachers, students, school notebooks, lessons, attendance, grades, and assignments.
 
-O projeto foi desenvolvido com Java e Spring Boot, utilizando uma arquitetura em camadas para separar controllers, serviços, repositórios, entidades e objetos de transferência de dados (DTOs).
+The project was built with Java and Spring Boot, using a layered architecture to separate controllers, services, repositories, entities, and Data Transfer Objects (DTOs).
 
-## ✨ Funcionalidades
+## ✨ Features
 
-Entre os recursos implementados na API estão:
+The API implements features including:
 
-- Gerenciamento de usuários, professores, administradores e instituições.
-- Criação, consulta, edição e finalização de cadernetas escolares.
-- Cadastro e organização de alunos.
-- Gerenciamento de aulas e conteúdos relacionados.
-- Registro e consulta de frequência dos estudantes.
-- Gerenciamento de notas e atividades.
-- Consulta de desempenho dos alunos e identificação de tarefas pendentes.
-- Recursos relacionados a códigos da BNCC.
-- Utilitários para processamento e geração de arquivos de planilha.
-- Autenticação e autorização com Spring Security e JWT.
+- Management of users, teachers, administrators, and institutions.
+- Creation, retrieval, editing, and finalization of school notebooks.
+- Student registration and organization.
+- Management of lessons and related content.
+- Recording and retrieval of student attendance.
+- Management of grades and assignments.
+- Student performance queries and identification of pending tasks.
+- Features related to BNCC curriculum codes.
+- Utilities for processing and generating spreadsheet files.
+- Authentication and authorization with Spring Security and JWT.
 
-A disponibilidade de cada operação depende das regras de acesso implementadas para os diferentes perfis de usuário.
+The availability of each operation depends on the access rules implemented for the different user roles.
 
-## 🧰 Tecnologias
+## 🧰 Technologies
 
 - **Java 20**
 - **Spring Boot 3**
@@ -36,67 +36,67 @@ A disponibilidade de cada operação depende das regras de acesso implementadas 
 - Maven
 - Lombok
 
-## 🏗️ Organização da aplicação
+## 🏗️ Application structure
 
-O código está organizado por responsabilidade:
+The code is organized by responsibility:
 
-- `controllers`: endpoints REST e tratamento das requisições HTTP.
-- `services`: regras de negócio e orquestração das operações.
-- `repositories`: acesso e persistência dos dados com Spring Data JPA.
-- `models/entities`: entidades persistidas no banco de dados.
-- `models/dtos`: objetos utilizados na comunicação entre a API e os clientes.
-- `configs`: configurações gerais e de segurança.
-- `utils`: utilitários para operações auxiliares, incluindo tratamento de cadernetas e planilhas.
+- `controllers`: REST endpoints and HTTP request handling.
+- `services`: business rules and operation orchestration.
+- `repositories`: data access and persistence with Spring Data JPA.
+- `models/entities`: entities persisted in the database.
+- `models/dtos`: objects used for communication between the API and its clients.
+- `configs`: general and security configurations.
+- `utils`: helper utilities, including operations for handling school notebooks and spreadsheets.
 
-## ▶️ Como executar localmente
+## ▶️ How to run locally
 
-### Pré-requisitos
+### Prerequisites
 
 - JDK 20.
 - PostgreSQL.
 - Git.
 
-### 1. Clone o repositório
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/C410lol/teacher-notes-hub-api.git
 cd teacher-notes-hub-api
 ```
 
-### 2. Configure o banco de dados
+### 2. Configure the database
 
-Crie um banco de dados PostgreSQL e configure a conexão da aplicação em:
+Create a PostgreSQL database and configure the application's connection in:
 
 ```
 src/main/resources/application.properties
 ```
 
-Confira também as configurações de segurança e os parâmetros necessários à geração e validação de tokens JWT. Utilize valores próprios para seu ambiente local e não publique credenciais ou chaves secretas no repositório.
+Also check the security settings and the parameters required to generate and validate JWTs. Use your own values for your local environment and do not publish credentials or secret keys in the repository.
 
-### 3. Execute a aplicação
+### 3. Run the application
 
-No Linux ou macOS:
+On Linux or macOS:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-No Windows:
+On Windows:
 
 ```powershell
 mvnw.cmd spring-boot:run
 ```
 
-### 4. Execute os testes
+### 4. Run the tests
 
 ```bash
 ./mvnw test
 ```
 
-## 🔗 Projeto relacionado
+## 🔗 Related project
 
-- [Teacher Notes Hub — Frontend Angular](https://github.com/C410lol/teacher-notes-hub-front)
+- [Teacher Notes Hub — Angular Frontend](https://github.com/C410lol/teacher-notes-hub-front)
 
 ---
 
-Este repositório contém o backend do Teacher Notes Hub. Para utilizar a solução completa, consulte também o projeto frontend.
+This repository contains the backend of Teacher Notes Hub. To use the complete solution, also check out the frontend project.
